@@ -1,0 +1,60 @@
+.status          { color: @text-color; }
+.status-added    { color: @git-status-added; }
+.status-ignored  { color: @git-status-ignored; }
+.status-modified { color: @git-status-modified; }
+.status-removed  { color: @git-status-removed; }
+.status-renamed  { color: @git-status-renamed; }
+
+// Git Tab (right hand panel)
+// ----------------------------------------------
+.github-Panel {
+  font-size: @ui-size;
+}
+
+// Staging view list item select state
+.github-StagingView-header {
+  border-top: 1px solid darken(@background-color-selected, 7%);
+}
+
+.github-StagingView {
+  .github-StagingView-group.is-focused .is-selected {
+    background-color: darken(@background-color-selected, 6%);
+  }
+
+  &:focus .github-StagingView-group.is-focused .is-selected {
+    color: white;
+    background-color: darken(@background-color-selected, 4%);
+  }
+}
+
+// Commit editor
+.github-CommitView-editor {
+  padding: 0;
+
+  atom-text-editor {
+    padding: @ui-padding / 2;
+    border-radius: @component-border-radius;
+  }
+}
+
+// Hunk view selected state
+
+.github-FilePatchView,
+.github-FilePatchView:focus {
+  .github-HunkView.is-selected.is-hunkMode .github-HunkView-title,
+  .github-HunkView.is-selected.is-hunkMode .github-HunkView-header,
+  .github-HunkView-line.is-selected .github-HunkView-lineNumber {
+    color: @text-color;
+    background-color: darken(@background-color-selected, 4%);
+    border-color: @base-border-color;
+  }
+  .github-HunkView.is-selected.is-hunkMode .github-HunkView-header {
+    .github-HunkView-stageButton,
+    .github-HunkView-discardButton {
+      border-color: @base-border-color;
+      &:hover {
+        background-color: @button-background-color-hover;
+      }
+    }
+  }
+}

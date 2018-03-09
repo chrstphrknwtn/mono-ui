@@ -6,7 +6,7 @@ Essentially a fork of [One Dark UI](https://github.com/atom/one-dark-ui),
 _without_ the dynamic colors based on chosen syntax theme.
 
 Screenshots also show the accompanying
-[Mono Syntax Theme](https://github.com/atom/one-dark-ui).
+[Mono Syntax Theme](https://github.com/chrstphrknwtn/mono-syntax).
 
 ![Mono UI Buffer](screenshots/buffer.png)
 ![Mono UI Git](screenshots/git.png)
